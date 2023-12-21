@@ -154,6 +154,8 @@ input::placeholder {
     box-shadow: 5px 5px 5px 5px rgb(185, 114, 47);
     transition: transform 0.3s;
     align-items: center;
+    flex-wrap: wrap;
+    min-width: 201px;
 }
 .desired-img{
     border: 1px solid rgb(97, 31, 0);
@@ -205,10 +207,15 @@ input::placeholder {
 #imgname{
     /* width: max-content;
     height: max-content; */
-    font-size: medium;
+    font-size: 1.6vw;
     border-radius: 6vw;
     background-color: rgb(241, 182, 53);
     align-items: center;
+    width: 18vw;
+    height: 2vw;
+    text-align: center;
+    color: #441c01;
+    font-weight: 700;
     
 }
 .IngredientsRecipe{
@@ -231,6 +238,7 @@ input::placeholder {
     height: 100%;
     width: 100%;
     transform: translate(-50%,-50%);
+    z-index: 2;
 }
 .myrecipebtn{
     font-family: Dancing Script ;
@@ -255,4 +263,14 @@ input::placeholder {
 }
 li{
     list-style: none;
+}
+#ingredients{
+    font-family: Dancing Script ;
+    background-color: rgb(250, 147, 63);
+    color: whitesmoke;
+    border: 2px solid rgb(250, 147, 63);
+    border-radius: 1vw 1vw;
+    width: 18vw;
+    height: 2vw;
+    font-size: 1.6vw;
 }

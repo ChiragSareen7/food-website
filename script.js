@@ -107,7 +107,12 @@ function randomness(){
         randommeal.setAttribute('src',`${data.meals[0].strMealThumb}`)
         imgname.innerText =`${data.meals[0].strMeal}`;
         console.log(imgname)
-        random.setAttribute('onclick','recipe-details')
+        // randomness.setAttribute('onclick','recipe-details')
+        document.getElementById("ingredients").addEventListener('click',()=>{
+            console.log("hello")
+            popup(data.meals[0])
+            fetchId(data.meals[0].idMeal)
+        })
     })
     .catch((error)=>{
         console.log("sorry an error occured",error)
