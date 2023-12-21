@@ -55,40 +55,43 @@ function fetchId(id){
         console.log(data)
         recipeIngredients.innerHTML=`
         <h2 class="one">${data.meals[0].strMeal}</h2>
+        <div class="no">
+        <img src="${data.meals[0].strMealThumb}" class="yes">
+        </div>
         <h3 class="two">Ingredints:</h3>
         <ul class="three">${fetchIngredientsRecipe(data.meals[0])}</ul>
-        // <div>
-        //   <h3>Instructions: </h3>
-        //   <p class="four">${data.meals[0].strInstructions}</p>
-        // </div>
+        <div>
+          <h3 class="lol">Instructions: </h3>
+          <p class="four">${data.meals[0].strInstructions}</p>
+        </div>
         `
         recipeIngredients.parentElement.style.display="block";
     })
 }
 
-// var sentence =[
-//     "One cannot think well, love well, sleep well, if one has not dined well. - Virginia Woolf",
-// "Let food be thy medicine and medicine be thy food. - Hippocrates",
-// "People who love to eat are always the best people. - Julia Child",
-// "The only way to get rid of a temptation is to yield to it. - Oscar Wilde",
-// "Food is our common ground, a universal experience. - James Beard",
-// "Life is uncertain. Eat dessert first. - Ernestine Ulmer",
-// "All you need is love. But a little chocolate now and then doesn't hurt. - Charles M. Schulz",
-// "Tell me what you eat, and I will tell you what you are. - Jean Anthelme Brillat-Savarin",
-// "A party without cake is just a meeting. - Julia Child",
-// "First we eat, then we do everything else. - M.F.K. Fisher",
-// "Cooking is like love. It should be entered into with abandon or not at all. - Harriet Van Horne",
-// "Food, in the end, in our own tradition, is something holy. It's not about nutrients and calories. It's about sharing. It's about honesty. It's about identity. - Louise Fresco",
-// "If you really want to make a friend, go to someone's house and eat with him... the people who give you their food give you their heart. - Cesar Chavez",
-// "Cooking is at once child's play and adult joy. And cooking done with care is an act of love. - Craig Claiborne",
-// "One cannot think well, love well, sleep well if one has not dined well. - M.F.K. Fisher",
-// "Food is art, and food is love. And we should show love and appreciation for those who cook it by eating it with relish. - Mark Bittman",
-// "The only time to eat diet food is while you're waiting for the steak to cook. - Julia Child"
-// ]
-// function phase(){
-//     return Math.floor(Math.random()*sentence.length)
-// }
-// document.getElementById("quotes").innerText=sentence[phase()];\\
+var sentence =[
+    "One cannot think well, love well, sleep well, if one has not dined well. - Virginia Woolf",
+"Let food be thy medicine and medicine be thy food. - Hippocrates",
+"People who love to eat are always the best people. - Julia Child",
+"The only way to get rid of a temptation is to yield to it. - Oscar Wilde",
+"Food is our common ground, a universal experience. - James Beard",
+"Life is uncertain. Eat dessert first. - Ernestine Ulmer",
+"All you need is love. But a little chocolate now and then doesn't hurt. - Charles M. Schulz",
+"Tell me what you eat, and I will tell you what you are. - Jean Anthelme Brillat-Savarin",
+"A party without cake is just a meeting. - Julia Child",
+"First we eat, then we do everything else. - M.F.K. Fisher",
+"Cooking is like love. It should be entered into with abandon or not at all. - Harriet Van Horne",
+"Food, in the end, in our own tradition, is something holy. It's not about nutrients and calories. It's about sharing. It's about honesty. It's about identity. - Louise Fresco",
+"If you really want to make a friend, go to someone's house and eat with him... the people who give you their food give you their heart. - Cesar Chavez",
+"Cooking is at once child's play and adult joy. And cooking done with care is an act of love. - Craig Claiborne",
+"One cannot think well, love well, sleep well if one has not dined well. - M.F.K. Fisher",
+"Food is art, and food is love. And we should show love and appreciation for those who cook it by eating it with relish. - Mark Bittman",
+"The only time to eat diet food is while you're waiting for the steak to cook. - Julia Child"
+]
+function phase(){
+    return Math.floor(Math.random()*sentence.length)
+}
+document.getElementById("quotes").innerText=sentence[phase()];
 
 
 
@@ -113,6 +116,11 @@ function randomness(){
             popup(data.meals[0])
             fetchId(data.meals[0].idMeal)
         })
+        const lastestclick=document.getElementById("latest")
+lastestclick.addEventListener('click',()=>{
+    popup(data.meals[0])
+            fetchId(data.meals[0].idMeal)
+})
     })
     .catch((error)=>{
         console.log("sorry an error occured",error)
@@ -145,3 +153,4 @@ const popup=(meals)=>{
 closeRecipe.addEventListener('click',()=>{
     recipeIngredients.parentElement.style.display="none";
 })
+

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:ital,wght@0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Caveat:wght@700&family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:ital,wght@0,400;1,100&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -24,16 +26,18 @@ body{
 }
 .logo{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .navig{
+    height: 100px;
     background-color: rgb(187, 53, 53);
     display: flex;
     color: whitesmoke;
     font-size: large;
-    justify-content: space-evenly;
-    margin-top: 3vw;
+    justify-content: space-between;
+    /* margin-top: 3vw; */
+    font-family: Caveat;
 }
 
 
@@ -49,6 +53,7 @@ body{
     color: aliceblue;
     font-size: x-large;
     flex-direction: column;
+    font-family: Caveat;
 }
 .chef{
     display: flex;
@@ -65,28 +70,29 @@ body{
     border: 2px solid rgb(187, 53, 53);
     color: rgb(187, 53, 53);
     width: 20vw;
-    height: 5vw;
+    height: 3vw;
     font-size: 2.2vw;
     text-align: center;
     font-weight: 800;
     font-family: Dancing Script ;
-    background-image: url(./assets/food.jpg);
+    /* background-image: url(./assets/food.jpg); */
 
 }
 .search{
-    margin: 3vw;
+    /* margin: 3vw; */
+    /* width: 60vw; */
      background-color: rgb(241, 182, 53);
      text-align: center;
      font-family: Dancing Script ;
      display: flex;
      justify-content: center;
-     border-radius: 6vw;
+     /* border-radius: 6vw; */
      align-items: center;
 }
 input::placeholder {
     color: #441c01; 
     font-weight: 700;
-    font-size: large;
+    font-size: 1.7vw;
 }
 #recomendedQuotes{
     display: flex;
@@ -94,22 +100,24 @@ input::placeholder {
     flex-wrap: wrap;
 }
 #quotes{
-    width: 30vw;
-    height: 25vw;
-    font-weight: 800;
-    font-size: xx-large;
-    background-image: url("./assets/quoteback.png");
+    /* width: 15vw;
+    height: 3vw; */
+    font-weight: 600;
+    font-size: 2vw;
+    /* background-image: url("./assets/quoteback.png");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 10vw;
+    margin-top: 10vw; */
     border-radius: 30px 0px 30px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgb(255, 255, 255);
+    color: rgb(143, 68, 25);
     text-align: center;
-    box-shadow: 5px 5px 5px 5px rgb(204, 114, 54);
+    /* box-shadow: 5px 5px 5px 5px rgba(122, 58, 16, 0.774); */
+    margin-top: 3vw;
+    display: inherit;
 }
 
 #finddish{
@@ -144,6 +152,7 @@ input::placeholder {
 
 
 .desireMeals{
+    font-family: Caveat;
     background-color: rgb(187, 53, 53);
     display: flex;
     flex-direction: column;
@@ -163,6 +172,7 @@ input::placeholder {
     
 }
 .desired-name{
+    font-family: Caveat;
     text-align: center;
     /* width: min-content; */
     border-radius: 6vw;
@@ -185,6 +195,7 @@ input::placeholder {
     z-index: 1;
 }
 .IngredientsRecipe{
+    font-family: Caveat;
     background-color: rgb(184, 132, 21);
     border-radius: 6vw;
    color: #441c01;
@@ -195,7 +206,7 @@ input::placeholder {
    text-decoration: none;
 }
 .para{
-    font-size: x-large;
+    font-size: 1.8vw;
     color: #441c01;
     font-weight: 800;
 }
@@ -229,21 +240,23 @@ input::placeholder {
     background-color: black;
 }
 #recipe-details{
+    font-family: Caveat;
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    background-color: rgba(255, 255, 255, 0.384);
+    background-color: rgb(255, 255, 255);
     backdrop-filter: blur(15px);
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
     transform: translate(-50%,-50%);
     z-index: 2;
+    overflow: scroll;
 }
 .myrecipebtn{
-    font-family: Dancing Script ;
+    font-family: Caveat;
     background-color: rgb(250, 147, 63);
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     width: 15vw;
     height: 4vw;
     font-size: 1.3vw;
@@ -252,6 +265,8 @@ input::placeholder {
     margin-top: 2vw;
     padding: 0vw;
     text-align: center;
+    font-weight: 700;
+    font-size: 1.6vw;
 }
 .close-recipe{
     width: 2vw;
@@ -260,17 +275,93 @@ input::placeholder {
 .four{
     font-weight: 600;
     font-size: larger;
+    text-align: center;
 }
 li{
     list-style: none;
 }
 #ingredients{
-    font-family: Dancing Script ;
+    font-family: Caveat;
     background-color: rgb(250, 147, 63);
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     border: 2px solid rgb(250, 147, 63);
     border-radius: 1vw 1vw;
     width: 18vw;
     height: 2vw;
     font-size: 1.6vw;
+}
+.three li{
+    background-color: rgba(204, 58, 58, 0.63);
+    padding: 10px;
+    margin: 10px;
+    width: 15vw;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+.three{
+    display: flex;
+    flex-wrap: wrap;
+}
+.one{
+    text-align: center;
+}
+.yes{
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 2vw;
+}
+.no{
+    display: flex;
+    justify-content: center;
+}
+.two{
+    padding: 2vw;
+    font-size: 1.8vw;
+    font-weight: 700;
+    text-align: center;
+}
+.lol{
+    padding: 2vw;
+    font-size: 1.8vw;
+    font-weight: 700;
+    text-align: center;
+}
+.heading{
+    text-align: center;
+}
+.navitems{
+    width: 29vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.7vw;
+}
+.navlogo{
+    background-color: aliceblue;
+}
+.four{
+    padding: 3vw;
+}
+@media only screen and (max-width: 600px) {
+    #recomendedQuotes {
+        flex-direction: column;
+    }
+    .search{
+        height: 2vh;
+    }
+    .navig{
+        height: 2vh;
+    }
+    h2{
+        font-size: 1.8vw;
+    }
+    #recomendedQuotes{
+      align-items: center;
+    }
 }
