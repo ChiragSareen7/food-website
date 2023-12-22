@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:ital,wght@0,400;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Caveat:wght@700&family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:ital,wght@0,400;1,100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Caveat:wght@700&family=Comfortaa:wght@300&family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:ital,wght@0,400;1,100&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -214,7 +214,20 @@ input::placeholder {
     width: 33vw;
     height: 33vw;
     margin-top: 7vw;
+      animation: floating2 2s ease-in-out infinite;
 }
+
+@keyframes floating2{
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
 #imgname{
     /* width: max-content;
     height: max-content; */
@@ -348,6 +361,70 @@ li{
 .four{
     padding: 3vw;
 }
+footer{
+    height: 8vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4vw;
+}
+.footone{
+    display: flex;
+    align-items: center;
+    width: 5vw;
+    height: 5vw;
+   
+}
+.foottwo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: x-large;
+}
+.footone img{
+    width: 12vw;
+    height: 5.5vw;
+    margin-top: 2vw;
+}
+
+#popup-aboutus{
+    font-family: 'Dancing Script', cursive;
+    background-color:#E9D1A3;
+    text-align: center;
+    display: flex;
+    /* position: fixed; */
+    /* top: 40%;
+    left: 50%;
+    height: 90vw;
+    width: 90vw;
+    transform: translate(-50%,-50%);
+    z-index: 5; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   color: #441c01;
+    margin-top: 6vw;
+}
+.discription{
+    font-size: 2vw;
+}
+.high{
+    font-size: 2vw;
+}
+.Welcome{
+    width: 45vw;
+    height: 4vw;
+    font-size: 4vw;
+    font-weight: 900;
+    padding: 1vw;
+    
+}
+.aboutgif{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 3vw;
+}
+
 @media only screen and (max-width: 600px) {
     #recomendedQuotes {
         flex-direction: column;
@@ -364,4 +441,17 @@ li{
     #recomendedQuotes{
       align-items: center;
     }
+    .desired-img{
+        width: 35vw;
+        height: 30vw;
+     
+     }
+     .desired-name{
+         font-size: larger;
+        width: 40vw !important;
+     }
+     .myrecipebtn{
+        font-size: 4vw;
+        width: 40vw !important;
+     }
 }

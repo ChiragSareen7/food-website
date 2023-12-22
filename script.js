@@ -154,3 +154,6 @@ closeRecipe.addEventListener('click',()=>{
     recipeIngredients.parentElement.style.display="none";
 })
 
+document.getElementById("about").addEventListener('click',()=>{
+document.getElementById("popup-aboutus").style.display="flex";
+})
